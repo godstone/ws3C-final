@@ -25,6 +25,13 @@ header img {
   height: auto;
 }
 
+nav.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  
+}
+
 svg {
   position: absolute;
   bottom: 0;
@@ -80,5 +87,12 @@ section.asymmetric.divergent::after {
  transform-origin: top right;
  transform: skewY(-3deg);
  z-index: -10;
+}
+
+/* ELEMENTS */
+.button.is-contact {
+    background-color: var(--darkblue);
+    border-color: transparent;
+    color: #fff;
 }
 
