@@ -29,7 +29,19 @@ nav.navbar {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  
+}
+div.navbar-brand .navbar-item {
+  -webkit-transition: background-color 300ms; /* Safari */
+  transition: background-color 300ms;
+}
+div.navbar-brand .navbar-item:hover {
+  background: #fafafa;
+}
+
+h1[id], h2[id] {
+  padding-top: 65px;
+  margin-top: -65px;
+  --webkit-display: inline-block; /* required for webkit browsers */
 }
 
 svg {
