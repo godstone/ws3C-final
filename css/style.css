@@ -1,7 +1,20 @@
+/* ******************** */
+/* Import GoogleFont    */
+/* ******************** */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:600');
+
+/* ******************** */
+/* Set CSS Variables    */
+/* ******************** */
 :root {
   --darkblue: #2193b0;
   --lightblue: #6dd5ed;
 }
+
+
+/* ******************** */
+/* MashWall CSS         */
+/* ******************** */
 
 header {
   position: relative;
@@ -9,9 +22,18 @@ header {
   background-image: linear-gradient(to left, var(--darkblue), var(--lightblue));
 }
 
+body {
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+}
+
+p {
+  line-height: 180%;
+}
+
 h1 {
   padding: 100px 0;
-  font: 44px "Helvetica Neue", sans-serif;
+  font-size: 44px;
   text-align: center;
 }
 
@@ -19,11 +41,34 @@ header h1 {
   color: white;
 }
 
+h1[id], h2[id] {
+  padding-top: 65px;
+  margin-top: -65px;
+  --webkit-display: inline-block; /* required for webkit browsers */
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
 header img {
   width: 20vw;
   max-width: 250px;
   height: auto;
 }
+
+svg {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
+  /* set height to pixels if you want angle to change with screen width */
+}
+
+
+/* ******************** */
+/* Styling Navigation   */
+/* ******************** */
 
 nav.navbar {
   position: -webkit-sticky;
@@ -38,21 +83,27 @@ div.navbar-brand .navbar-item:hover {
   background: #fafafa;
 }
 
-h1[id], h2[id] {
-  padding-top: 65px;
-  margin-top: -65px;
-  --webkit-display: inline-block; /* required for webkit browsers */
+
+/* ******************** */
+/* Styling Contact-Form */
+/* ******************** */
+
+div.dsgvo label.label {
+  font-weight: bold;
 }
 
-svg {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 10vw;
-  /* set height to pixels if you want angle to change with screen width */
+div.dsgvo label.checkbox {
+  padding: 10px 15px 15px;
 }
 
-section {}
+.label.dualinput {
+  margin-bottom: 0;
+}
+
+
+/* ******************** */
+/* Styling Sections     */
+/* ******************** */
 
 section.asymmetric {
  position: relative;
@@ -101,7 +152,11 @@ section.asymmetric.divergent::after {
  z-index: -10;
 }
 
-/* ELEMENTS */
+
+/* ******************** */
+/* Styling Elements     */
+/* ******************** */
+
 .button.is-contact {
     background-color: var(--darkblue);
     border-color: transparent;

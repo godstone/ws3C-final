@@ -4,7 +4,8 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keyword" content="keyword,keyword,keyword" />
+  <meta name="keywords" content="mashup,mashwall,firewall,kmu,sicherheit,security,vpn,ssl,openvpn,openssl" />
+  <meta name="author" content="MashUp GmbH" />
   <title>MashWall by MashUp GmbH</title>
 
   <link href="css/bulma.min.css" type="text/css" rel="stylesheet" />
@@ -61,7 +62,7 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-contact">
+            <a class="button is-contact" href="#title-4">
               <strong>Kontakt</strong>
             </a>
           </div>
@@ -90,45 +91,45 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
     <div class="container">
       <h2 id="title-2" class="title is-2">MashWalls</h2>
       <div class="pricing-table">
-        <div class="pricing-plan">
+        <div class="pricing-plan is-info">
           <div class="plan-header">Stratus</div>
           <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">CHF</span>9.90</span>/month</div>
           <div class="plan-items">
+            <div class="plan-item">Privathaushalt</div>
             <div class="plan-item">1 Person</div>
-            <div class="plan-item">100 Domains</div>
-            <div class="plan-item">-</div>
-            <div class="plan-item">-</div>
+            <div class="plan-item">Ports IN/OUT: 1/1</div>
+            <div class="plan-item">Max. VPN-Tunnels: 1</div>
           </div>
           <div class="plan-footer">
-            <button class="button is-fullwidth" disabled="disabled">Current plan</button>
+            <button class="button is-fullwidth" onclick="switchSelect('Stratus')">Auswählen</button>
+          </div>
+        </div>
+
+        <div class="pricing-plan is-success">
+          <div class="plan-header">Cirrus</div>
+          <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">CHF</span>14.90</span>/month</div>
+          <div class="plan-items">
+            <div class="plan-item">Privathaushalt</div>
+            <div class="plan-item">2-5 Personen</div>
+            <div class="plan-item">Ports IN/OUT: 1/5</div>
+            <div class="plan-item">Max. VPN-Tunnels: 5</div>
+          </div>
+          <div class="plan-footer">
+            <button class="button is-fullwidth" onclick="switchSelect('Cirrus')">Auswählen</button>
           </div>
         </div>
 
         <div class="pricing-plan is-warning">
-          <div class="plan-header">Cirrus</div>
-          <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">CHF</span>14.90</span>/month</div>
-          <div class="plan-items">
-            <div class="plan-item">2-5 Personen</div>
-            <div class="plan-item">25 Domains</div>
-            <div class="plan-item">1TB Bandwidth</div>
-            <div class="plan-item">-</div>
-          </div>
-          <div class="plan-footer">
-            <button class="button is-fullwidth">Choose</button>
-          </div>
-        </div>
-
-        <div class="pricing-plan is-active">
           <div class="plan-header">Pileus</div>
           <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">CHF</span>19.90</span>/month</div>
           <div class="plan-items">
+            <div class="plan-item">KMU</div>
             <div class="plan-item">6-15 Personen</div>
-            <div class="plan-item">50 Domains</div>
-            <div class="plan-item">1TB Bandwidth</div>
-            <div class="plan-item">100 Email Boxes</div>
+            <div class="plan-item">Ports IN/OUT: 2/15</div>
+            <div class="plan-item">Max. VPN-Tunnels: 1</div>
           </div>
           <div class="plan-footer">
-            <button class="button is-fullwidth">Choose</button>
+            <button class="button is-fullwidth" onclick="switchSelect('Pileus')">Auswählen</button>
           </div>
         </div>
 
@@ -136,13 +137,13 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
           <div class="plan-header">Anvil</div>
           <div class="plan-price"><span class="plan-price-amount"><span class="plan-price-currency">CHF</span>29.90</span>/month</div>
           <div class="plan-items">
+            <div class="plan-item">KMU</div>
             <div class="plan-item">16+ personen</div>
-            <div class="plan-item">100 Domains</div>
-            <div class="plan-item">1TB Bandwidth</div>
-            <div class="plan-item">1000 Email Boxes</div>
+            <div class="plan-item">Ports IN/OUT: 2/30</div>
+            <div class="plan-item">Max. VPN-Tunnels: 50</div>
           </div>
           <div class="plan-footer">
-            <button class="button is-fullwidth">Choose</button>
+            <button class="button is-fullwidth" onclick="switchSelect('Anvil')">Auswählen</button>
           </div>
         </div>
       </div>
@@ -183,16 +184,13 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
           <div class="field has-addons">
             <div class="control is-expanded">
               <div class="select is-fullwidth">
-                <select name="country">
+                <select name="firewallmodel" id="firewallmodel">
                   <option value="Stratus">Stratus</option>
                   <option value="Cirrus">Cirrus</option>
                   <option value="Pileus">Pileus</option>
                   <option value="Anvil">Anvil</option>
                 </select>
               </div>
-            </div>
-            <div class="control">
-              <button type="submit" class="button is-primary">Wählen</button>
             </div>
           </div>
 
@@ -207,14 +205,14 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
           <div class="field is-horizontal">
             <div class="field-body">
               <div class="field">
-                <label class="label"></label>
+                <label class="label dualinput"></label>
                 <div class="control">
                   <input class="input" type="text" placeholder="Vorname">
                 </div>
               </div>
 
               <div class="field">
-                <label class="label"></label>
+                <label class="label dualinput"></label>
                 <div class="control">
                   <input class="input" type="text" placeholder="Name">
                 </div>
@@ -250,12 +248,12 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
             </div>
           </div>
 
-          <div class="field">
-            <label class "label">Bestätigung zur Speicherung meiner Daten </label>
+          <div class="field dsgvo">
+            <label class="label">Bestätigung zur Speicherung meiner Daten:</label>
             <div class="control">
               <label class="checkbox">
-                <input type="checkbox" onclick="myDatasaveFunction()" id="dataCheck">
-                Datensicherung zustimmen:
+                <input type="checkbox" id="dataCheck">
+                Ich stimme der Sicherung meiner Daten zu.
               </label>
             </div>
             <p>Ich erkläre mich hiermit einverstanden, dass die Daten aus dem Kontaktformular gemeinsam mit meiner IP-Adresse zur ausschliesslichen Verfolgung der im Formular geäusserten Anliegen gespeichert werden. Die MashUp GmbH speichert die Daten auf einem Server in der Schweiz und als Kopie als E-Mail, ebenfalls auf einem Server in der Schweiz. Diese Daten werden spätestens 14 Tage nach Erledigung des formulierten Anliegens komplett gelöscht. Bei Zustandekommen einer Geschäftsbeziehung werden die Daten auf Wunsch des Kunden archiviert.</p>
@@ -264,9 +262,6 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
           <div class="field is-grouped">
             <div class="control">
               <button class="button is-primary">Senden</button>
-            </div>
-            <div class="control">
-              <button class="button is-text">Abbrechen</button>
             </div>
           </div>
 

@@ -1,3 +1,4 @@
+/* Hamburger-Icon Animation for Mobile-Navigation */
 $(document).ready(function() {
 
   // Check for click events on the navbar burger icon
@@ -10,6 +11,7 @@ $(document).ready(function() {
   });
 });
 
+/* Smooth OnePage-Navigation ScrollDowns */
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
 
@@ -17,3 +19,12 @@ $(document).on('click', 'a[href^="#"]', function (event) {
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 500);
 });
+
+
+/* Change Dropdown-Select to the chosen Product */
+function switchSelect(model) {
+    $('#firewallmodel').val(model).trigger('change');
+    $('html, body').animate({
+        scrollTop: $('#title-4').offset().top
+    }, 500);
+}
