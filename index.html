@@ -31,14 +31,14 @@
         <img src="assets/mashwall-nav-logo.svg" width="170" height="50" alt="Mashwall Logo">
       </a>
 
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbar-mashwall">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbar-mashwall" class="navbar-menu">
       <div class="navbar-end">
         <a class="navbar-item" href="#title-1">
           Home
@@ -55,25 +55,18 @@
         <a class="navbar-item" href="#title-4">
           Kontakt
         </a>
-
-
+        
       </div>
 
       <div class="navbar-end">
         <div class="navbar-item">
-          <div class="buttons">
+          <div class="buttons is-hidden-tablet">
             <a class="button is-contact" href="#title-4">
               <strong>Kontakt</strong>
             </a>
           </div>
         </div>
       </div>
-
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
 
     </div>
   </nav>
@@ -153,9 +146,9 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
   <section class="section column">
     <div class="container">
       <h2 id="title-3" class="title is-2">Sicherheit</h2>
-      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-        no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+      <p>Sicherheit ist auch in der Informatik und im Netzwerk ein sehr präsentes Thema, wie der Sicherheitsgurt im Auto. </p>
+      <p>Wer möchte schon, dass seine E-Banking Daten abgegriffen werden oder seine Urlaubsfotos und Kreditkartendaten auf dubiosen Plattformen im Internet zu finden sind. Deshalb reagieren Sie noch heute und sorgen Sie für den notwendigen Schutz Ihrer Daten.</p>
+      <br><p>Eine MashWall bietet nebst zuverlässigem Schutz einer Firewall auch die Möglichkeit sich von überall auf der Welt mittels VPN durch diesen Schutzmechanismus absichern zu lassen.</p>
     </div>
   </section>
 
@@ -170,8 +163,8 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
             Gurtenareal 14<br>
             CH-3084 Wabern<br>
             <br>
-            +41 (0)31 552 09 80<br>
-            info@mashup.ch
+            <a href="tel:0041-31-552-09-80">+41 (0)31 552 09 80</a><br>
+            <a href="mailto:info@mashup.ch">info@mashup.ch</a>
           </p><br>
           <h3 class="title is-3">&Ouml;ffnungszeiten</h3>
           <p>Montag – Freitag<br>08.00 – 12.00 & 13.00 – 17.00</p>
@@ -185,6 +178,7 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
             <div class="control is-expanded">
               <div class="select is-fullwidth">
                 <select name="firewallmodel" id="firewallmodel">
+                  <option value="default" selected="selected">Wählen Sie ein Produkt…</option>
                   <option value="Stratus">Stratus</option>
                   <option value="Cirrus">Cirrus</option>
                   <option value="Pileus">Pileus</option>
@@ -207,14 +201,14 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
               <div class="field">
                 <label class="label dualinput"></label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Vorname">
+                  <input class="input" type="text" placeholder="Vorname" required>
                 </div>
               </div>
 
               <div class="field">
                 <label class="label dualinput"></label>
                 <div class="control">
-                  <input class="input" type="text" placeholder="Name">
+                  <input class="input" type="text" placeholder="Name" required>
                 </div>
               </div>
             </div>
@@ -223,21 +217,21 @@ Im Gegensatz zu anderen Anbietern von Firewalls setzt die MashWall auf Open Sour
           <div class="field">
             <label class="label"></label>
             <div class="control">
-              <input class="input" type="email" placeholder="Email">
+              <input class="input" type="email" placeholder="Email" required>
             </div>
           </div>
 
           <div class="field">
             <label class="label"></label>
             <div class="control">
-              <input class="input" type="tel" placeholder="Telefonnummer">
+              <input class="input" type="tel" placeholder="Telefon" required>
             </div>
           </div>
 
           <div class="field">
             <label class="label"></label>
             <div class="control">
-              <input class="input" type="tel" placeholder="Mobilenummer">
+              <input class="input" type="tel" placeholder="Mobile">
             </div>
           </div>
 
