@@ -2,6 +2,7 @@
 ws3C Final project
 
 Group: 01 - MashUp GmbH
+
 Team: Luca Rüegger & Simon Gottstein
 
 
