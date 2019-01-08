@@ -7,7 +7,7 @@ Team: Luca Rüegger & Simon Gottstein
 
 
 
-/* Installation guide */
+## Installation guide
 
 1.) Download whole project.
 
